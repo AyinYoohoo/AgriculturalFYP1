@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="theme-color" content="#4CAF50"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+    <title>Sell Your Produce - FarmConnect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css "/>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-leaf"></i>
+                FarmConnect
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" data-lang="nav-home">Home</a></li>
+                    <li><a href="index.html#products" data-lang="nav-products">Products</a></li>
+                    <li><a href="index.html#sellers" data-lang="nav-sellers">Sellers</a></li>
+                    <li><a href="index.html#categories" data-lang="nav-categories">Categories</a></li>
+                    <li><a href="index.html#about" data-lang="nav-about">About</a></li>
+                    <li><a href="index.html#contact" data-lang="nav-contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="#" class="btn btn-secondary" data-lang="login">Login</a>
+                <a href="#" class="btn btn-primary" data-lang="signup">Sign Up</a>
+                <!-- Language Toggle -->
+                <button id="langToggle" class="btn btn-secondary" style="font-size: 0.9rem; padding: 8px 12px;">BM</button>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="index.html" data-lang="nav-home">Home</a></li>
+            <li><a href="index.html#products" data-lang="nav-products">Products</a></li>
+            <li><a href="index.html#sellers" data-lang="nav-sellers">Sellers</a></li>
+            <li><a href="index.html#categories" data-lang="nav-categories">Categories</a></li>
+            <li><a href="index.html#about" data-lang="nav-about">About</a></li>
+            <li><a href="index.html#contact" data-lang="nav-contact">Contact</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <a href="#" class="btn btn-secondary" data-lang="login">Login</a>
+            <a href="#" class="btn btn-primary" data-lang="signup">Sign Up</a>
+            <!-- Language Toggle -->
+            <button id="langToggleMobile" class="btn btn-secondary" style="font-size: 0.9rem; padding: 8px 12px;">BM</button>
+        </div>
+    </div>
+
+    <!-- Sell Your Produce Section -->
+    <section class="hero" style="margin-bottom: 40px;">
+        <div class="hero-content">
+            <h1 data-lang="sell-title">List Your Produce for Sale</h1>
+            <p data-lang="sell-desc">Join thousands of farmers selling directly to buyers. It's fast, free, and easy!</p>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title" data-lang="form-title">Add Your Product</h2>
+            <form class="product-form" id="productForm">
+                <div class="form-group">
+                    <label for="productName" data-lang="product-name">Product Name</label>
+                    <input type="text" id="productName" placeholder="e.g., Fresh Tomatoes" required />
+                </div>
+                <div class="form-group">
+                    <label for="category" data-lang="category">Category</label>
+                    <select id="category" required>
+                        <option value="" data-lang="select-category">Select Category</option>
+                        <option value="vegetables" data-lang="vegetables">Vegetables</option>
+                        <option value="fruits" data-lang="fruits">Fruits</option>
+                        <option value="grains" data-lang="grains">Grains</option>
+                        <option value="livestock" data-lang="livestock">Livestock</option>
+                        <option value="dairy" data-lang="dairy">Dairy</option>
+                        <option value="equipment" data-lang="equipment">Equipment</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="price" data-lang="price-unit">Price per Unit</label>
+                    <input type="number" id="price" placeholder="e.g., 5.50" step="0.01" min="0" required />
+                </div>
+                <div class="form-group">
+                    <label for="quantity" data-lang="quantity">Available Quantity (kg/dozen/etc)</label>
+                    <input type="number" id="quantity" placeholder="e.g., 150" min="0" required />
+                </div>
+                <div class="form-group">
+                    <label for="description" data-lang="description">Product Description</label>
+                    <textarea id="description" rows="4" placeholder="Describe your product..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="image" data-lang="product-image">Product Image</label>
+                    <input type="file" id="image" accept="image/*" />
+                </div>
+                <button type="submit" class="btn btn-primary" data-lang="submit-product">Submit Product</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <a href="#" class="footer-logo">
+                        <i class="fas fa-leaf"></i>
+                        FarmConnect
+                    </a>
+                    <p data-lang="footer-about">Connecting farmers and buyers since 2020.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3 data-lang="quick-links">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html" data-lang="nav-home">Home</a></li>
+                        <li><a href="index.html#products" data-lang="nav-products">Products</a></li>
+                        <li><a href="index.html#sellers" data-lang="nav-sellers">Sellers</a></li>
+                        <li><a href="index.html#categories" data-lang="nav-categories">Categories</a></li>
+                        <li><a href="index.html#about" data-lang="nav-about">About</a></li>
+                        <li><a href="index.html#contact" data-lang="nav-contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3 data-lang="contact-us">Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Labuan, Malaysia</p>
+                    <p><i class="fas fa-phone"></i> 999 </p>
+                    <p><i class="fas fa-envelope"></i> ain@farmconnect.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FarmConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Modal Alert -->
+    <script>
+        document.getElementById('productForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert("Thank you! This is a prototype. Your product has been submitted.");
+            this.reset();
+        });
+    </script>
+
+    <!-- Auth Buttons JavaScript -->
+    <script>
+        // Simulate Login/Signup Button Click for both desktop and mobile
+        document.querySelectorAll('.auth-buttons .btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault(); // Prevent default link behavior
+                alert("This is a prototype. You need to log in or sign up first!");
+            });
+        });
+    </script>
+
+    <!-- Reuse mobile menu script from index.html -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Close mobile menu when clicking on auth buttons
+        const mobileAuthButtons = mobileMenu.querySelectorAll('.auth-buttons .btn');
+        mobileAuthButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+    </script>
+
+    <!-- Language Translation Script -->
+    <script>
+        // Language content mapping for sell-produce.html
+        const langContent = {
+            en: {
+                // Navigation
+                "nav-home": "Home",
+                "nav-products": "Products",
+                "nav-sellers": "Sellers",
+                "nav-categories": "Categories",
+                "nav-about": "About",
+                "nav-contact": "Contact",
+                "login": "Login",
+                "signup": "Sign Up",
+                
+                // Hero Section
+                "sell-title": "List Your Produce for Sale",
+                "sell-desc": "Join thousands of farmers selling directly to buyers. It's fast, free, and easy!",
+                
+                // Form Section
+                "form-title": "Add Your Product",
+                "product-name": "Product Name",
+                "category": "Category",
+                "select-category": "Select Category",
+                "vegetables": "Vegetables",
+                "fruits": "Fruits",
+                "grains": "Grains",
+                "livestock": "Livestock",
+                "dairy": "Dairy",
+                "equipment": "Equipment",
+                "price-unit": "Price per Unit",
+                "quantity": "Available Quantity (kg/dozen/etc)",
+                "description": "Product Description",
+                "product-image": "Product Image",
+                "submit-product": "Submit Product",
+                
+                // Footer
+                "footer-about": "Connecting farmers and buyers since 2020.",
+                "quick-links": "Quick Links",
+                "contact-us": "Contact Us"
+            },
+            ms: {
+                // Navigation
+                "nav-home": "Utama",
+                "nav-products": "Produk",
+                "nav-sellers": "Penjual",
+                "nav-categories": "Kategori",
+                "nav-about": "Tentang Kami",
+                "nav-contact": "Hubungi",
+                "login": "Log Masuk",
+                "signup": "Daftar",
+                
+                // Hero Section
+                "sell-title": "Senaraikan Hasil Anda untuk Dijual",
+                "sell-desc": "Sertai ribuan petani yang menjual secara langsung kepada pembeli. Ia pantas, percuma, dan mudah!",
+                
+                // Form Section
+                "form-title": "Tambah Produk Anda",
+                "product-name": "Nama Produk",
+                "category": "Kategori",
+                "select-category": "Pilih Kategori",
+                "vegetables": "Sayur-sayuran",
+                "fruits": "Buah-buahan",
+                "grains": "Bijirin",
+                "livestock": "Ternakan",
+                "dairy": "Tenusu",
+                "equipment": "Peralatan",
+                "price-unit": "Harga per Unit",
+                "quantity": "Kuantiti Tersedia (kg/dozen/dll)",
+                "description": "Penerangan Produk",
+                "product-image": "Gambar Produk",
+                "submit-product": "Hantar Produk",
+                
+                // Footer
+                "footer-about": "Menghubungkan petani dan pembeli sejak 2020.",
+                "quick-links": "Pautan Pantas",
+                "contact-us": "Hubungi Kami"
+            }
+        };
+
+        // Function to set language
+        function setLanguage(lang) {
+            document.querySelectorAll('[data-lang]').forEach(el => {
+                const key = el.getAttribute('data-lang');
+                if (langContent[lang] && langContent[lang][key]) {
+                    if (el.tagName === 'INPUT' && el.type === 'text') {
+                        el.placeholder = langContent[lang][key];
+                    } else {
+                        el.textContent = langContent[lang][key];
+                    }
+                }
+            });
+            // Update both desktop and mobile language toggle buttons
+            const desktopToggle = document.getElementById('langToggle');
+            const mobileToggle = document.getElementById('langToggleMobile');
+            if (desktopToggle) desktopToggle.textContent = lang === 'en' ? 'BM' : 'EN';
+            if (mobileToggle) mobileToggle.textContent = lang === 'en' ? 'BM' : 'EN';
+        }
+
+        // Event listener for desktop toggle button
+        document.getElementById('langToggle').addEventListener('click', () => {
+            const currentLang = document.documentElement.getAttribute('lang');
+            const newLang = currentLang === 'en' ? 'ms' : 'en';
+            document.documentElement.setAttribute('lang', newLang);
+            setLanguage(newLang);
+        });
+
+        // Event listener for mobile toggle button
+        document.getElementById('langToggleMobile').addEventListener('click', () => {
+            const currentLang = document.documentElement.getAttribute('lang');
+            const newLang = currentLang === 'en' ? 'ms' : 'en';
+            document.documentElement.setAttribute('lang', newLang);
+            setLanguage(newLang);
+        });
+
+        // Set default language on load
+        document.documentElement.setAttribute('lang', 'en');
+        setLanguage('en');
+    </script>
+</body>
+</html>

@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="theme-color" content="#4CAF50"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+    <title>FarmConnect - Agricultural Marketplace</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css "/>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fas fa-leaf"></i>
+                FarmConnect
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" data-lang="nav-home">Home</a></li>
+                    <li><a href="#products" data-lang="nav-products">Products</a></li>
+                    <li><a href="#sellers" data-lang="nav-sellers">Sellers</a></li>
+                    <li><a href="#categories" data-lang="nav-categories">Categories</a></li>
+                    <li><a href="#about" data-lang="nav-about">About</a></li>
+                    <li><a href="#contact" data-lang="nav-contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="#" class="btn btn-secondary" data-lang="login">Login</a>
+                <a href="#" class="btn btn-primary" data-lang="signup">Sign Up</a>
+                <!-- Language Toggle -->
+                <button id="langToggle" class="btn btn-secondary" style="font-size: 0.9rem; padding: 8px 12px;">BM</button>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#" data-lang="nav-home">Home</a></li>
+            <li><a href="#products" data-lang="nav-products">Products</a></li>
+            <li><a href="#sellers" data-lang="nav-sellers">Sellers</a></li>
+            <li><a href="#categories" data-lang="nav-categories">Categories</a></li>
+            <li><a href="#about" data-lang="nav-about">About</a></li>
+            <li><a href="#contact" data-lang="nav-contact">Contact</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <a href="#" class="btn btn-secondary" data-lang="login">Login</a>
+            <a href="#" class="btn btn-primary" data-lang="signup">Sign Up</a>
+            <!-- Language Toggle -->
+            <button id="langToggleMobile" class="btn btn-secondary" style="font-size: 0.9rem; padding: 8px 12px;">BM</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 data-lang="hero-title">Buy Fresh Direct from Farmers!</h1>
+<p data-lang="hero-desc">Connect with local farmers and get the freshest produce at the best prices</p>
+<a href="#products" class="btn btn-primary" data-lang="shop-now">Shop Now</a>
+<a href="sell-produce.html" class="btn btn-secondary" data-lang="sell-produce">Sell Your Produce</a>
+            <!-- <div class="hero-buttons">
+                <a href="#products" class="btn btn-primary">Shop Now</a>
+                <a href="sell-produce.html" class="btn btn-secondary">Sell Your Produce</a> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="What are you looking for?" data-lang="search-placeholder">
+                <select class="search-category">
+                    <option value="" data-lang="all-categories">All Categories</option>
+                    <option value="vegetables">Vegetables</option>
+                    <option value="fruits">Fruits</option>
+                    <option value="grains">Grains</option>
+                    <option value="livestock">Livestock</option>
+                    <option value="dairy">Dairy</option>
+                    <option value="equipment">Equipment</option>
+                </select>
+                <button class="search-btn" data-lang="search-btn">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <h2 class="section-title" data-lang="section-products">Featured Products</h2>
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://atlas-content-cdn.pixelsquid.com/stock-images/tomato-VayDYV9-600.jpg " alt="Fresh Tomatoes">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Fresh Tomatoes</h3>
+                        <div class="product-price">RM5.50/kg</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(24)</span>
+                        </div>
+                        <div class="product-stock">In Stock: 150kg</div>
+                        <div class="product-buttons">
+                            <button class="btn btn-primary" data-lang="buy-now">Buy Now</button>
+                            <button class="btn btn-secondary" data-lang="contact-seller">Contact Seller</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://pngimg.com/d/wheat_PNG75.png " alt="Organic Wheat">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Organic Wheat</h3>
+                        <div class="product-price">RM10.80/kg</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(18)</span>
+                        </div>
+                        <div class="product-stock">In Stock: 500kg</div>
+                        <div class="product-buttons">
+                            <button class="btn btn-primary" data-lang="buy-now">Buy Now</button>
+                            <button class="btn btn-secondary" data-lang="contact-seller">Contact Seller</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/039/213/328/small_2x/ai-generated-white-chicken-eggs-on-transparent-background-ai-generated-png.png " alt="Free Range Eggs">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Free Range Eggs</h3>
+                        <div class="product-price">RM9.20/dozen</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(36)</span>
+                        </div>
+                        <div class="product-stock">In Stock: 80 dozen</div>
+                        <div class="product-buttons">
+                            <button class="btn btn-primary" data-lang="buy-now">Buy Now</button>
+                            <button class="btn btn-secondary" data-lang="contact-seller">Contact Seller</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://us.123rf.com/450wm/dashadima/dashadima1603/dashadima160300010/53980539-garden-icons-set-isolated-on-white-background.jpg?ver=6" alt="Farm Tools Set">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Farm Tools Set</h3>
+                        <div class="product-price">RM95.00</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(12)</span>
+                        </div>
+                        <div class="product-stock">In Stock: 15 sets</div>
+                        <div class="product-buttons">
+                            <button class="btn btn-primary" data-lang="buy-now">Buy Now</button>
+                            <button class="btn btn-secondary" data-lang="contact-seller">Contact Seller</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section" id="categories">
+        <div class="container">
+            <h2 class="section-title" data-lang="section-categories">Shop by Category</h2>
+            <p class="section-subtitle" data-lang="section-subtitle">Get the best harvest deals from our trusted farmers</p>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-carrot"></i>
+                    </div>
+                    <h3 class="category-name">Vegetables</h3>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <h3 class="category-name">Fruits</h3>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-wheat-awn"></i>
+                    </div>
+                    <h3 class="category-name">Grains</h3>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-cow"></i>
+                    </div>
+                    <h3 class="category-name">Livestock</h3>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-cheese"></i>
+                    </div>
+                    <h3 class="category-name">Dairy</h3>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-tractor"></i>
+                    </div>
+                    <h3 class="category-name">Equipment</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seller Spotlight -->
+    <section class="seller-section" id="sellers">
+        <div class="container">
+            <h2 class="section-title" data-lang="section-sellers">Featured Seller</h2>
+            <div class="seller-card">
+                <div class="seller-image">
+                    <img src=" https://media.licdn.com/dms/image/v2/D5603AQGYckEtm12HQw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1721708642496?e=2147483647&v=beta&t=Ts5I2G8tFtrDaoKmlTxnSzMNvt78r0VrmwheyjS3zUc" alt="John Farmer">
+                </div>
+                <div class="seller-info">
+                    <h3>Siti Nurain Binti Daud</h3>
+                    <div class="seller-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.7 (128 reviews)</span>
+                    </div>
+                    <div class="seller-verified">
+                        <i class="fas fa-check-circle"></i>
+                        <span data-lang="verified-seller">Verified Seller</span>
+                    </div>
+                    <p>Organic farmer specializing in seasonal vegetables and fruits. Committed to sustainable farming practices.</p>
+                    <div class="seller-stats">
+                        <div class="seller-stat">
+                            <div class="stat-value">5,000+</div>
+                            <div class="stat-label" data-lang="transactions">Transactions</div>
+                        </div>
+                        <div class="seller-stat">
+                            <div class="stat-value">98%</div>
+                            <div class="stat-label" data-lang="positive-reviews">Positive Reviews</div>
+                        </div>
+                        <div class="seller-stat">
+                            <div class="stat-value">5 yrs</div>
+                            <div class="stat-label" data-lang="on-farmconnect">On FarmConnect</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title" data-lang="section-testimonials">What Our Customers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "I've been using FarmConnect for 2 years now and it's completely transformed my restaurant's supply chain. The quality is consistently excellent."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src=" https://media.istockphoto.com/id/1269841295/photo/side-view-of-a-senior-farmer-standing-in-corn-field-examining-crop-at-sunset.jpg?s=612x612&w=0&k=20&c=Lheldd6VVGQGxrgC8_mwUTLxXGg9v8Y6abjmYLhLHug= " alt="Ali">
+                        </div>
+                        <div class="author-info">
+                            <h4>Ali</h4>
+                            <div class="author-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "As a small-scale farmer, FarmConnect has helped me reach customers I never could have on my own. The platform is easy to use and the support team is fantastic."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://img.freepik.com/premium-photo/old-farmer-with-mustache-handsome-man-looking-camera_184353-2670.jpg" alt="Abu">
+                        </div>
+                        <div class="author-info">
+                            <h4>Abu</h4>
+                            <div class="author-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Saved 30% on my weekly produce purchases by buying directly from farmers. The freshness is unmatched compared to supermarkets. Highly recommend!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://t4.ftcdn.net/jpg/00/88/34/05/360_F_88340572_yYDZFVXHKk055hjiqBwZcSmwftKJTPWI.jpg " alt="Bros">
+                        </div>
+                        <div class="author-info">
+                            <h4>Bros</h4>
+                            <div class="author-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2 class="section-title" data-lang="section-about">About FarmConnect</h2>
+            <div class="about-content">
+                <p data-lang="about-text">FarmConnect is a digital marketplace connecting farmers directly with buyers, eliminating middlemen and ensuring fair prices for both producers and consumers.</p>
+                <p>Founded in 2020, our mission is to support sustainable agriculture by making it easier for farmers to sell their products and for buyers to access fresh, local produce.</p>
+                <p>We believe in transparency, quality, and building lasting relationships between farmers and their customers.</p>
+                <a href="#" class="btn btn-primary" data-lang="learn-more">Learn More About Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <a href="#" class="footer-logo">
+                        <i class="fas fa-leaf"></i>
+                        FarmConnect
+                    </a>
+                    <p data-lang="footer-about">Connecting farmers and buyers since 2020. Our platform makes it easy to buy and sell agricultural products directly.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3 data-lang="quick-links">Quick Links</h3>
+                    <ul>
+                        <li><a href="#" data-lang="nav-home">Home</a></li>
+                        <li><a href="#products" data-lang="nav-products">Products</a></li>
+                        <li><a href="#sellers" data-lang="nav-sellers">Sellers</a></li>
+                        <li><a href="#categories" data-lang="nav-categories">Categories</a></li>
+                        <li><a href="#about" data-lang="nav-about">About Us</a></li>
+                        <li><a href="#contact" data-lang="nav-contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3 data-lang="nav-categories">Categories</h3>
+                    <ul>
+                        <li><a href="#categories">Vegetables</a></li>
+                        <li><a href="#categories">Fruits</a></li>
+                        <li><a href="#categories">Grains</a></li>
+                        <li><a href="#categories">Livestock</a></li>
+                        <li><a href="#categories">Dairy</a></li>
+                        <li><a href="#categories">Equipment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3 data-lang="contact-us">Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Labuan, Malaysia</p>
+                    <p><i class="fas fa-phone"></i> +60 1131664728</p>
+                    <p><i class="fas fa-envelope"></i> yiyin@farmconnect.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</p>
+                </div>
+            </div>
+            <div class="payment-methods">
+                <img src="https://cdn-icons-png.flaticon.com/512/196/196578.png " alt="Visa">
+                <img src="https://cdn-icons-png.flaticon.com/512/196/196561.png " alt="Mastercard">
+                <img src="https://cdn-icons-png.flaticon.com/512/196/196566.png " alt="PayPal">
+                <img src="https://cdn-icons-png.flaticon.com/512/196/196552.png " alt="American Express">
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FarmConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+    // Simulate Login/Signup Button Click for both desktop and mobile
+    document.querySelectorAll('.auth-buttons .btn').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default link behavior
+            alert("This is a prototype. You need to log in or sign up first!");
+        });
+    });
+</script>
+
+<script>
+    // Handle search button click
+    document.querySelector('.search-btn').addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent form submission
+
+        const searchInput = document.querySelector('.search-input').value.trim();
+        const categorySelect = document.querySelector('.search-category').value;
+
+        // Log values for demonstration purposes
+        console.log("Searching for:", searchInput);
+        console.log("Category selected:", categorySelect);
+
+        // Optional: Show alert message for user feedback
+        if (!searchInput && !categorySelect) {
+            alert("Please enter a search term or select a category.");
+            return;
+        }
+
+        // Scroll to Shop by Categories section
+        document.getElementById('categories').scrollIntoView({ behavior: 'smooth' });
+
+        // Optional: Highlight the selected category
+        const categories = document.querySelectorAll('.category-card');
+        categories.forEach(card => {
+            const categoryName = card.querySelector('.category-name').textContent.toLowerCase();
+            const categoryIcon = card.querySelector('.category-icon i').classList.value.toLowerCase();
+
+            if (
+                categoryName.includes(searchInput.toLowerCase()) ||
+                (categorySelect && categoryName === categorySelect.toLowerCase())
+            ) {
+                card.style.border = '2px solid var(--primary-color)';
+                card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } else {
+                card.style.border = 'none';
+            }
+        });
+    });
+</script>
+
+<script>
+    // Product action buttons functionality
+    document.querySelectorAll('.product-buttons .btn').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const action = this.textContent.trim();
+            const productTitle = this.closest('.product-card').querySelector('.product-title').textContent;
+            
+            if (action === 'Buy Now') {
+                alert(`This is a prototype. You need to log in to purchase "${productTitle}".`);
+            } else if (action === 'Contact Seller') {
+                alert(`This is a prototype. Contact seller functionality for "${productTitle}" would be implemented here.`);
+            }
+        });
+    });
+
+    // "Learn More About Us" button
+    document.querySelector('.about-section .btn-primary').addEventListener('click', function(e) {
+        e.preventDefault();
+        alert("This is a prototype. Detailed about page would be implemented here.");
+    });
+
+    // Footer social media links
+    document.querySelectorAll('.social-links a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const platform = this.querySelector('i').classList[1].split('-')[1];
+            alert(`This is a prototype. ${platform.charAt(0).toUpperCase() + platform.slice(1)} page would be implemented here.`);
+        });
+    });
+
+    // Footer category links
+    document.querySelectorAll('.footer-links ul li a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const category = this.textContent;
+            alert(`This is a prototype. ${category} category page would be implemented here.`);
+        });
+    });
+
+    // Modal functionality
+    const modal = document.querySelector('.prototype-modal');
+    const closeBtn = document.querySelector('.close-btn');
+
+    // Close modal when clicking the X button
+    closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+
+    // Close modal when clicking outside of it
+    window.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        
+        if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target) && mobileMenu.classList.contains('active')) {
+            mobileMenu.classList.remove('active');
+        }
+    });
+
+    // Category cards functionality
+    document.querySelectorAll('.category-card').forEach(card => {
+        card.addEventListener('click', function(e) {
+            e.preventDefault();
+            const categoryName = this.querySelector('.category-name').textContent;
+            alert(`This is a prototype. ${categoryName} category page would be implemented here.`);
+        });
+        
+        // Add cursor pointer for better UX
+        card.style.cursor = 'pointer';
+    });
+
+    // Add enter key support for search
+    document.querySelector('.search-input').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            document.querySelector('.search-btn').click();
+        }
+    });
+</script>
+
+<script>
+    // Language content mapping
+    const langContent = {
+        en: {
+            "hero-title": "Buy Fresh Direct from Farmers!",
+            "hero-desc": "Connect with local farmers and get the freshest produce at the best prices",
+            "shop-now": "Shop Now",
+            "sell-produce": "Sell Your Produce",
+            "section-products": "Featured Products",
+            "section-categories": "Shop by Category",
+            "section-subtitle": "Get the best harvest deals from our trusted farmers",
+            "section-sellers": "Featured Seller",
+            "section-testimonials": "What Our Customers Say",
+            "section-about": "About FarmConnect",
+            "about-text": "FarmConnect is a digital marketplace connecting farmers directly with buyers, eliminating middlemen and ensuring fair prices for both producers and consumers.",
+            "learn-more": "Learn More About Us",
+            "footer-about": "Connecting farmers and buyers since 2020. Our platform makes it easy to buy and sell agricultural products directly.",
+            "nav-home": "Home",
+            "nav-products": "Products",
+            "nav-sellers": "Sellers",
+            "nav-categories": "Categories",
+            "nav-about": "About Us",
+            "nav-contact": "Contact",
+            "login": "Login",
+            "signup": "Sign Up",
+            "quick-links": "Quick Links",
+            "contact-us": "Contact Us",
+            "search-placeholder": "What are you looking for?",
+            "search-btn": "Search",
+            "all-categories": "All Categories",
+            "buy-now": "Buy Now",
+            "contact-seller": "Contact Seller",
+            "verified-seller": "Verified Seller",
+            "transactions": "Transactions",
+            "positive-reviews": "Positive Reviews",
+            "on-farmconnect": "On FarmConnect"
+        },
+        ms: {
+            "hero-title": "Beli Hasil Segar Langsung dari Petani!",
+            "hero-desc": "Berhubung dengan petani tempatan dan dapatkan hasil terbaik pada harga yang kompetitif",
+            "shop-now": "Beli Sekarang",
+            "sell-produce": "Jual Hasil Anda",
+            "section-products": "Produk Pilihan",
+            "section-categories": "Kategori Produk",
+            "section-subtitle": "Dapatkan tawaran hasil terbaik dari petani yang dipercayai kami",
+            "section-sellers": "Penjual Terpilih",
+            "section-testimonials": "Apa Kata Pelanggan Kami",
+            "section-about": "Tentang FarmConnect",
+            "about-text": "FarmConnect adalah pasaran digital yang menghubungkan petani secara langsung dengan pembeli, menghilangkan perantara dan memastikan harga yang adil untuk kedua-dua pihak.",
+            "learn-more": "Ketahui Lebih Lanjut",
+            "footer-about": "Menghubungkan petani dan pembeli sejak 2020. Platform kami memudahkan pembelian dan jualan produk pertanian secara langsung.",
+            "nav-home": "Utama",
+            "nav-products": "Produk",
+            "nav-sellers": "Penjual",
+            "nav-categories": "Kategori",
+            "nav-about": "Tentang Kami",
+            "nav-contact": "Hubungi",
+            "login": "Log Masuk",
+            "signup": "Daftar",
+            "quick-links": "Pautan Pantas",
+            "contact-us": "Hubungi Kami",
+            "search-placeholder": "Apa yang anda cari?",
+            "search-btn": "Cari",
+            "all-categories": "Semua Kategori",
+            "buy-now": "Beli Sekarang",
+            "contact-seller": "Hubungi Penjual",
+            "verified-seller": "Penjual Disahkan",
+            "transactions": "Transaksi",
+            "positive-reviews": "Ulasan Positif",
+            "on-farmconnect": "Di FarmConnect"
+        }
+    };
+
+    // Function to set language
+    function setLanguage(lang) {
+        document.querySelectorAll('[data-lang]').forEach(el => {
+            const key = el.getAttribute('data-lang');
+            if (langContent[lang] && langContent[lang][key]) {
+                if (el.tagName === 'INPUT' && el.type === 'text') {
+                    el.placeholder = langContent[lang][key];
+                } else {
+                    el.textContent = langContent[lang][key];
+                }
+            }
+        });
+        // Update both desktop and mobile language toggle buttons
+        const desktopToggle = document.getElementById('langToggle');
+        const mobileToggle = document.getElementById('langToggleMobile');
+        if (desktopToggle) desktopToggle.textContent = lang === 'en' ? 'BM' : 'EN';
+        if (mobileToggle) mobileToggle.textContent = lang === 'en' ? 'BM' : 'EN';
+    }
+
+    // Event listener for desktop toggle button
+    document.getElementById('langToggle').addEventListener('click', () => {
+        const currentLang = document.documentElement.getAttribute('lang');
+        const newLang = currentLang === 'en' ? 'ms' : 'en';
+        document.documentElement.setAttribute('lang', newLang);
+        setLanguage(newLang);
+    });
+
+    // Event listener for mobile toggle button
+    document.getElementById('langToggleMobile').addEventListener('click', () => {
+        const currentLang = document.documentElement.getAttribute('lang');
+        const newLang = currentLang === 'en' ? 'ms' : 'en';
+        document.documentElement.setAttribute('lang', newLang);
+        setLanguage(newLang);
+    });
+
+    // Set default language on load
+    document.documentElement.setAttribute('lang', 'en');
+    setLanguage('en');
+</script>
+
+<!-- Modal -->
+<div class="prototype-modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3>Authentication Required</h3>
+        <p>This is a prototype. Please log in or register to continue.</p>
+    </div>
+</div>
+
+<script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking on a link
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+    });
+
+    // Close mobile menu when clicking on auth buttons
+    const mobileAuthButtons = mobileMenu.querySelectorAll('.auth-buttons .btn');
+    mobileAuthButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+    });
+</script>
+
+</body>
+</html>
